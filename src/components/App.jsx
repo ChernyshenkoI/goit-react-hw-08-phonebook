@@ -53,6 +53,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   padding-top: 10px;
-  background: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
+  background: rgb(153, 102, 153);
+
   min-height: 100vh;
 `;

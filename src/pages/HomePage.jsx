@@ -1,5 +1,5 @@
 const HomePage = () => {
-  return <h1>You can use this App as your own Phonebook</h1>;
+  return <h1>Wellcome, this is your own web Phonebook</h1>;
 };
 
 export default HomePage;
