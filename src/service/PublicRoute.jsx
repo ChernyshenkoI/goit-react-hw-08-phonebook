@@ -1,13 +1,7 @@
-const { useSelector } = require('react-redux');
-const { Navigate, Outlet } = require('react-router-dom');
-const { getAuth } = require('redux/authRedux/authSelectors');
+import { useSelector } from 'react-redux';
+import { Navigate, Outlet } from 'react-router-dom';
 
-const PublicRoute = () => {
-  const isLogin = useSelector(getAuth);
-  if (isLogin) {
-    return <Navigate to="/contacts" />;
-  }
-  return <Outlet />;
+export const PublicRoute = () => {
+  const token = useSelector(state => state.auth.token);
+  return token ? <Navigate to="/contacts" /> : <Outlet />;
 };
-
-export default PublicRoute;

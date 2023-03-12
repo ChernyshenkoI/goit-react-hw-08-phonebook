@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
-import PrivateRoute from 'service/PrivateRoute';
-import PublicRoute from 'service/PublicRoute';
+import { PrivateRoute } from 'service/PrivateRoute';
+import { PublicRoute } from 'service/PublicRoute';
 
 import { getRefreshing } from 'redux/authRedux/authSelectors';
 import { refresh } from 'redux/authRedux/authOperations';
