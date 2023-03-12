@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux';
 import { Navigate, Outlet } from 'react-router-dom';
+import { getAuth } from 'redux/authRedux/authSelectors';
 
 export const PublicRoute = () => {
-  const token = useSelector(state => state.auth.token);
-  return token ? <Navigate to="/contacts" /> : <Outlet />;
+  const isAuth = useSelector(getAuth);
+  return isAuth ? <Navigate to="/contacts" /> : <Outlet />;
 };
